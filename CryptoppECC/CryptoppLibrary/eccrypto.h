@@ -243,7 +243,7 @@ struct ECIES_BC
 DL_Keys_EC<EC>,
 DL_KeyAgreementAlgorithm_DH<typename EC::Point, COFACTOR_OPTION>,
 DL_KeyDerivationAlgorithm_P1363<typename EC::Point, true /*DHAES_MODE*/, P1363_KDF2<SHA1> >,
-DL_EncryptionAlgorithm_Xor<HMAC<SHA1>, true /*DHAES_MODE*/, true /*BC_COMPAT*/>,
+DL_EncryptionAlgorithm_Xor<HMAC<SHA1>, true /*DHAES_MODE*/, false /*BC_COMPAT*/>,
 ECIES_BC<EC> >
 {
     static std::string CRYPTOPP_API StaticAlgorithmName() {return "ECIES-BC";}	// TODO: fix this after name is standardized
